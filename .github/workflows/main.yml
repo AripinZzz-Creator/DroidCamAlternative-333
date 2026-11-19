@@ -19,8 +19,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Accept Android SDK Licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Setup Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
@@ -34,8 +34,8 @@ jobs:
           elif [ -f "DroidCamAlternative/settings.gradle.kts" ]; then
             cd DroidCamAlternative && gradle assembleDebug assembleRelease
           else
-            echo "Folder proyek Android tidak ditemukan!"
-            ls -la
+            echo "Struktur folder proyek Android tidak ditemukan:"
+            find . -maxdepth 3
             exit 1
           fi
 

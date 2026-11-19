@@ -1,0 +1,2 @@
+-keep class com.aripin.webcam.** { *; }
+-dontwarn androidx.camera.**

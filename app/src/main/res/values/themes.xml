@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.DroidCamAlternative" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#2563EB</item>
+        <item name="colorSecondary">#00E5FF</item>
+        <item name="android:statusBarColor">#0F1115</item>
+        <item name="android:navigationBarColor">#161920</item>
+    </style>
+</resources>
